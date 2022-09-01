@@ -20,6 +20,8 @@ while True:
     if event == 'Add Table Row':
         td.append([values[Headings[0]],values[Headings[1]],values[Headings[2]]])
         window['myTable'].update(values=td)
+        for i in range(3):    # Loop thru to clear boxes
+            window[Headings[i]].update(value='')
     if event in (sg.WIN_CLOSED, 'Exit'):
         break
 window.close()
